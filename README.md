@@ -44,27 +44,6 @@ root@hadoop-master:~#
 ./start-hadoop.sh
 ```
 
-#####6. run wordcount
-
-```
-./run-wordcount.sh
-```
-
-**output**
-
-```
-input file1.txt:
-Hello Hadoop
-
-input file2.txt:
-Hello Docker
-
-wordcount output:
-Docker    1
-Hadoop    1
-Hello    2
-```
-
 ###Arbitrary size Hadoop cluster
 
 #####1. pull docker images and clone github repository
