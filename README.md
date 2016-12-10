@@ -1,4 +1,4 @@
-##Run Hadoop Cluster within Docker Containers
+##Run Multi-Node Hadoop 2.x Cluster in Docker 12
 
 ###3 Nodes Hadoop Cluster
 
