@@ -11,9 +11,11 @@ sudo docker run -itd \
                 --net=hadoop \
                 -p 50070:50070 \
                 -p 8088:8088 \
+		-p 8080:8080 \
+		-p 8020:8020 \
                 --name hadoop-master \
                 --hostname hadoop-master \
-                viruant/hadoop....
+                viruant/hadoop:latest #CHANGE THIS
 
 
 # start hadoop slave container
@@ -24,9 +26,11 @@ do
 	echo "start hadoop-slave$i container..."
 	sudo docker run -itd \
 	                --net=hadoop \
+			-p 8440:8440 \
+			-p 8441:8441 \
 	                --name hadoop-slave$i \
 	                --hostname hadoop-slave$i \
-	                virtuant/hadoop...
+	                virtuant/hadoop:latest #CHANGE THIS
 	i=$(( $i + 1 ))
 done 
 
