@@ -5,7 +5,8 @@
 #####1. pull docker image
 
 ```
-sudo docker pull virtuant/hadoop:latest #CHANGE THIS
+sudo docker pull virtuant/hadoop-master:latest
+sudo docker pull virtuant/hadoop-slave:latest
 ```
 
 #####2. clone github repository
@@ -23,7 +24,7 @@ sudo docker network create --driver=bridge hadoop
 #####4. start container
 
 ```
-cd hadoop-cluster-docker
+cd hadoop2.x-cluster-docker12
 sudo ./start-container.sh
 ```
 
