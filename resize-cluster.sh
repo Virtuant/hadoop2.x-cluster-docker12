@@ -23,6 +23,6 @@ echo ""
 echo -e "\nbuild docker hadoop image\n"
 
 # rebuild kiwenlau/hadoop image
-sudo docker build -t virtuant/hadoop:latest . #CHANGE THIS
+sudo docker build -t virtuant/hadoop-slave:latest . 
 
 echo ""
