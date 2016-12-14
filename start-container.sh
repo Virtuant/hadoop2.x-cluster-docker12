@@ -30,7 +30,7 @@ sudo docker run -itd \
                 -p 22 \
                 --name hadoop-master \
                 --hostname hadoop-master \
-                viruant/hadoop-master:latest
+                virtuant/hadoop-master:latest
 
 
 # start hadoop slave container
