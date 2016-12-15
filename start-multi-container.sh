@@ -3,7 +3,6 @@
 # the default node number is 3
 N=${1:-3}
 
-
 # start hadoop master container
 sudo docker rm -f hadoop-master &> /dev/null
 echo "start hadoop-master container..."
@@ -30,7 +29,7 @@ sudo docker run -itd \
                 -p 22 \
                 --name hadoop-master \
                 --hostname hadoop-master \
-                virtuant/hadoop-master:latest
+                virtuant/hadoop-master:latest &> /dev/null
 
 
 # start hadoop slave container
@@ -54,7 +53,7 @@ do
                     -p 22 \
 	                --name hadoop-slave$i \
 	                --hostname hadoop-slave$i \
-	                virtuant/hadoop-5-cluster:latest
+	                virtuant/hadoop-5-cluster:latest &> /dev/null
 	i=$(( $i + 1 ))
 done 
 
