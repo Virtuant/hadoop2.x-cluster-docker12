@@ -1,24 +1,18 @@
-##Run Hadoop Cluster within Docker Containers
-
-- Blog: [Run Hadoop Cluster in Docker Update](http://kiwenlau.com/2016/06/26/hadoop-cluster-docker-update-english/)
-- 博客: [基于Docker搭建Hadoop集群之升级版](http://kiwenlau.com/2016/06/12/160612-hadoop-cluster-docker-update/)
-
-
-![alt tag](https://raw.githubusercontent.com/kiwenlau/hadoop-cluster-docker/master/hadoop-cluster-docker.png)
-
+##Run Multi-Node Hadoop 2.x Cluster in Docker 12
 
 ###3 Nodes Hadoop Cluster
 
 #####1. pull docker image
 
 ```
-sudo docker pull kiwenlau/hadoop:1.0
+sudo docker pull virtuant/hadoop-master:latest
+sudo docker pull virtuant/hadoop-slave:latest
 ```
 
 #####2. clone github repository
 
 ```
-git clone https://github.com/kiwenlau/hadoop-cluster-docker
+git clone https://github.com/virtuant/hadoop2.x-cluster-docker12
 ```
 
 #####3. create hadoop network
@@ -30,7 +24,7 @@ sudo docker network create --driver=bridge hadoop
 #####4. start container
 
 ```
-cd hadoop-cluster-docker
+cd hadoop2.x-cluster-docker12
 sudo ./start-container.sh
 ```
 
@@ -49,27 +43,6 @@ root@hadoop-master:~#
 
 ```
 ./start-hadoop.sh
-```
-
-#####6. run wordcount
-
-```
-./run-wordcount.sh
-```
-
-**output**
-
-```
-input file1.txt:
-Hello Hadoop
-
-input file2.txt:
-Hello Docker
-
-wordcount output:
-Docker    1
-Hadoop    1
-Hello    2
 ```
 
 ###Arbitrary size Hadoop cluster

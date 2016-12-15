@@ -1,6 +1,10 @@
 FROM ubuntu:14.04
 
+<<<<<<< HEAD
 MAINTAINER Virtuant
+=======
+MAINTAINER Virtuant <davidn@virtuant.com>
+>>>>>>> origin/master
 
 WORKDIR /root
 
