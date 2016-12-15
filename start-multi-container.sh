@@ -40,7 +40,7 @@ do
 	sudo docker rm -f hadoop-slave$i &> /dev/null
 	echo "start hadoop-slave$i container..."
 	sudo docker run -itd \
-	                --net=hadoop \
+	             --net=hadoop \
                     -p 50075 \
                     -p 50475 \
                     -p 50010 \
@@ -54,7 +54,7 @@ do
                     -p 22 \
 	                --name hadoop-slave$i \
 	                --hostname hadoop-slave$i \
-	                virtuant/hadoop-slave:latest
+	                virtuant/hadoop-5-cluster:latest
 	i=$(( $i + 1 ))
 done 
 
