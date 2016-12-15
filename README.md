@@ -54,4 +54,5 @@ root@hadoop-master:~#
 sudo ./start-multi-container.sh X
 ```
 - Set variable X = 3-5
-
+- This will pull a new image 'hadoop-5-cluster' but if is fails, 
+  download locally <docker pull virtuant/hadoop-5-cluster:latest>
